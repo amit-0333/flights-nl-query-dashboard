@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 
 
 def get_engine():
-    password = os.environ.get("DB_PASSWORD", "@amit03")
+    password = os.environ.get("DB_PASSWORD", "@yourpassword")
     safe_password = quote_plus(password)
     return create_engine(f"mysql+pymysql://root:{safe_password}@localhost:3306/flights")
 
